@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+
+    <canvas id='canvas' width="150" height="150"></canvas>
+
+    <script>
+
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+
+            ctx.beginPath();
+            ctx.lineTo(150, 0);
+            ctx.lineTo(150, 150);   //Just the frame
+            ctx.lineTo(0, 150);
+
+
+            ctx.moveTo(20, 50);
+            ctx.lineTo(18, 120);
+            ctx.moveTo(130, 50);
+            ctx.lineTo(132, 120);    								//Sides and upper helmet
+            ctx.moveTo(20, 50);
+            ctx.arc(75, 50, 50, 1 * Math.PI, 0 * Math.PI);
+            ctx.lineTo(130, 50);
+            ctx.moveTo(20, 50);
+            ctx.quadraticCurveTo(75, 47, 130, 50);
+            ctx.moveTo(20, 50);											//Outside vertical lines
+            ctx.lineTo(17, 58);
+            ctx.lineTo(16, 118);
+            ctx.lineTo(20, 120);
+            ctx.moveTo(130, 50);
+            ctx.lineTo(133, 58);
+            ctx.lineTo(134, 118);
+            ctx.lineTo(130, 120);
+
+
+            ctx.moveTo(132, 120);
+            ctx.lineTo(88, 130);
+            ctx.moveTo(62, 130);   //Lower lines of the helmet
+            ctx.lineTo(18, 120);
+
+            ctx.moveTo(23, 121);
+            ctx.lineTo(25, 50);			//inside vertical side lines
+            ctx.moveTo(127, 121);
+            ctx.lineTo(125, 50);
+
+            ctx.fillRect(65, 70, 20, 59);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(30, 57);
+            ctx.lineTo(120, 57); 			// T Glass
+            ctx.lineTo(120, 62);
+            ctx.lineTo(85, 70);
+            ctx.lineTo(65, 70);
+            ctx.lineTo(30, 62);
+            ctx.lineTo(30, 57);
+            ctx.fill()
+            ctx.moveTo(30, 58);
+            ctx.quadraticCurveTo(75, 54, 120, 58);
+            ctx.fill();
+
+            ctx.moveTo(62, 132);   														//Left upper cheek
+            ctx.bezierCurveTo(60, 100, 50, 70, 25, 68);
+            ctx.moveTo(62, 132);
+            ctx.lineTo(65, 132);
+            ctx.lineTo(65, 129);
+            ctx.moveTo(88, 132); 														//Right upper cheek
+            ctx.bezierCurveTo(90, 100, 100, 70, 125, 68);
+            ctx.moveTo(88, 132);
+            ctx.lineTo(85, 132);
+            ctx.lineTo(85, 129);
+
+            ctx.fillStyle = 'orange';
+            ctx.moveTo(62, 132);								//Left lower cheek
+            ctx.bezierCurveTo(55, 80, 35, 80, 25, 122);
+            ctx.moveTo(88, 132);								//right lower cheek
+            ctx.bezierCurveTo(95, 80, 115, 80, 125, 122);
+
+
+
+
+
+
+
+
+            ctx.stroke();
+
+
+
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>
