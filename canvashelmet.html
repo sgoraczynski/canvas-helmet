@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html>
 
-
 <body>
-
     <canvas id='canvas' width="150" height="150"></canvas>
-
     <script>
-
         var canvas = document.getElementById('canvas');
         if (canvas.getContext) {
             var ctx = canvas.getContext('2d');
-
 
             ctx.beginPath();
             ctx.lineTo(150, 0);
             ctx.lineTo(150, 150);   //Just the frame
             ctx.lineTo(0, 150);
-
 
             ctx.moveTo(20, 50);
             ctx.lineTo(18, 120);
@@ -36,7 +30,6 @@
             ctx.lineTo(133, 58);
             ctx.lineTo(134, 118);
             ctx.lineTo(130, 120);
-
 
             ctx.moveTo(132, 120);
             ctx.lineTo(88, 130);
@@ -80,22 +73,8 @@
             ctx.moveTo(88, 132);								//right lower cheek
             ctx.bezierCurveTo(95, 80, 115, 80, 125, 122);
 
-
-
-
-
-
-
-
             ctx.stroke();
-
-
-
-
-
-
         }
-
     </script>
 </body>
 
