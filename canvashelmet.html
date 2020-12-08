@@ -8,6 +8,7 @@
         if (canvas.getContext) {
             var ctx = canvas.getContext('2d');
             var x = 132;
+            var y = 132;
 
             ctx.beginPath();
             ctx.lineTo(150, 0);
@@ -57,21 +58,21 @@
             ctx.quadraticCurveTo(75, 54, 120, 58);
             ctx.fill();
 
-            ctx.moveTo(62, 132);   														//Left upper cheek
+            ctx.moveTo(62, y);   														//Left upper cheek
             ctx.bezierCurveTo(60, 100, 50, 70, 25, 68);
-            ctx.moveTo(62, 132);
-            ctx.lineTo(65, 132);
+            ctx.moveTo(62, y);
+            ctx.lineTo(65, y);
             ctx.lineTo(65, 129);
-            ctx.moveTo(88, 132); 														//Right upper cheek
+            ctx.moveTo(88, y); 														//Right upper cheek
             ctx.bezierCurveTo(90, 100, 100, 70, 125, 68);
-            ctx.moveTo(88, 132);
-            ctx.lineTo(85, 132);
+            ctx.moveTo(88, y);
+            ctx.lineTo(85, y);
             ctx.lineTo(85, 129);
 
             ctx.fillStyle = 'orange';
-            ctx.moveTo(62, 132);								//Left lower cheek
+            ctx.moveTo(62, y);								//Left lower cheek
             ctx.bezierCurveTo(55, 80, 35, 80, 25, 122);
-            ctx.moveTo(88, 132);								//right lower cheek
+            ctx.moveTo(88, y);								//right lower cheek
             ctx.bezierCurveTo(95, 80, 115, 80, 125, 122);
 
             ctx.stroke();
