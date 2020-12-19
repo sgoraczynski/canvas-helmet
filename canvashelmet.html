@@ -7,7 +7,7 @@
         var canvas = document.getElementById('canvas');
         if (canvas.getContext) {
             var ctx = canvas.getContext('2d');
-            var x = 132;
+            var xCoordinate = 132;
             var y = 132;
 
             ctx.beginPath();
@@ -18,7 +18,7 @@
             ctx.moveTo(20, 50);
             ctx.lineTo(18, 120);
             ctx.moveTo(130, 50);
-            ctx.lineTo(x, 120);    								//Sides and upper helmet
+            ctx.lineTo(xCoordinate, 120);    								//Sides and upper helmet
             ctx.moveTo(20, 50);
             ctx.arc(75, 50, 50, 1 * Math.PI, 0 * Math.PI);
             ctx.lineTo(130, 50);
@@ -33,7 +33,7 @@
             ctx.lineTo(134, 118);
             ctx.lineTo(130, 120);
 
-            ctx.moveTo(x, 120);
+            ctx.moveTo(xCoordinate, 120);
             ctx.lineTo(88, 130);
             ctx.moveTo(62, 130);   //Lower lines of the helmet
             ctx.lineTo(18, 120);
